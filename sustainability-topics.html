@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Topics - Environmental Awareness</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-leaf text-success"></i> EcoAware
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Sustainability</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="sustainability-topics.html">All Topics</a></li>
+                            <li><a class="dropdown-item" href="climate-change.html">Climate Change</a></li>
+                            <li><a class="dropdown-item" href="renewable-energy.html">Renewable Energy</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Get Involved</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="get-involved.html">Volunteer</a></li>
+                            <li><a class="dropdown-item" href="support-us.html">Donate</a></li>
+                            <li><a class="dropdown-item" href="events.html">Events</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-success ms-2" href="login.html">Login</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-success ms-2" href="register.html">Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container text-center">
+            <h1 class="fw-bold">Sustainability Topics</h1>
+            <p class="lead">Explore Key Environmental Issues and Solutions</p>
+        </div>
+    </section>
+
+    <!-- Topics Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.pexels.com/photos/1072824/pexels-photo-1072824.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="Climate Change">
+                        <div class="card-body text-center">
+                            <h3 class="fw-light mb-3">Climate Change</h3>
+                            <p class="card-text">Understanding causes, effects, and solutions to global climate.</p>
+                            <a href="climate-change.html" class="btn btn-success">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="Renewable Energy">
+                        <div class="card-body text-center">
+                            <h3 class="fw-light mb-3">Renewable Energy</h3>
+                            <p class="card-text">Solar, wind, and hydropower solutions for a sustainable future.</p>
+                            <a href="renewable-energy.html" class="btn btn-success">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm" id="waste-management">
+                        <img src="https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="Waste Management">
+                        <div class="card-body text-center">
+                            <h3 class="fw-light mb-3">Waste Management</h3>
+                            <p class="card-text">Reduce, reuse, recycle strategies and composting practices.</p>
+                            <a href="#waste-management" class="btn btn-success">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.pexels.com/photos/2765872/pexels-photo-2765872.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="Biodiversity">
+                        <div class="card-body text-center">
+                            <h3 class="fw-light mb-3">Biodiversity</h3>
+                            <p class="card-text">Wildlife conservation and ecosystem protection initiatives.</p>
+                            <a href="#biodiversity" class="btn btn-success">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Waste Management Section -->
+    <section class="py-5 bg-light" id="waste-management">
+        <div class="container">
+            <h2 class="fw-bold mb-5 text-center">Waste Management</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <h3 class="fw-light mb-3">Reduce, Reuse, Recycle</h3>
+                            <p class="card-text">The three R's form the foundation of waste management. Reducing consumption, reusing items, and recycling materials help minimize waste and conserve resources.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <h3 class="fw-light mb-3">Composting</h3>
+                            <p class="card-text">Organic waste can be transformed into nutrient-rich compost, reducing landfill waste and creating valuable soil amendments for gardens and agriculture.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <h3 class="fw-light mb-3">Plastic Reduction</h3>
+                            <p class="card-text">Plastic pollution is a major environmental concern. Learn about alternatives to single-use plastics and how to minimize your plastic footprint.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biodiversity Section -->
+    <section class="py-5" id="biodiversity">
+        <div class="container">
+            <h2 class="fw-bold mb-5 text-center">Biodiversity</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.pexels.com/photos/2765872/pexels-photo-2765872.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="Wildlife">
+                        <div class="card-body text-center">
+                            <h3 class="fw-light mb-3">Wildlife Conservation</h3>
+                            <p class="card-text">Protecting endangered species and their habitats is crucial for maintaining biodiversity and ecosystem balance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="Ecosystems">
+                        <div class="card-body text-center">
+                            <h3 class="fw-light mb-3">Protecting Ecosystems</h3>
+                            <p class="card-text">Healthy ecosystems provide essential services like clean water, air purification, and climate regulation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=800" class="card-img-top" alt="Forests">
+                        <div class="card-body text-center">
+                            <h3 class="fw-light mb-3">Forest Preservation</h3>
+                            <p class="card-text">Forests are vital carbon sinks and biodiversity hotspots. Conservation efforts help combat climate change and protect wildlife.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <a href="index.html" class="text-decoration-none mb-3 d-inline-block">
+                        <h2 class="fw-bold text-white mb-3">
+                            <i class="fas fa-leaf text-success"></i> EcoAware
+                        </h2>
+                    </a>
+                    <p>We are committed to raising awareness about environmental sustainability and inspiring action for a better planet.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white-50 text-decoration-none">About Us</a></li>
+                        <li><a href="sustainability-topics.html" class="text-white-50 text-decoration-none">Sustainability Topics</a></li>
+                        <li><a href="projects.html" class="text-white-50 text-decoration-none">Projects</a></li>
+                        <li><a href="get-involved.html" class="text-white-50 text-decoration-none">Get Involved</a></li>
+                        <li><a href="faqs.html" class="text-white-50 text-decoration-none">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-3">Contact</h5>
+                    <p><i class="fas fa-envelope me-2"></i> info@ecoaware.org</p>
+                    <p><i class="fas fa-phone me-2"></i> +1 (555) 123-4567</p>
+                    <div class="social-icons mt-3">
+                        <a href="#" class="text-white me-3" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-12 text-center">
+                    <div class="theme-toggle-container">
+                        <div class="theme-option">
+                            <i class="fas fa-sun"></i>
+                            <span>Light</span>
+                        </div>
+                        <label class="vertical-toggle-switch">
+                            <input type="checkbox" id="themeToggle">
+                            <span class="vertical-toggle-slider"></span>
+                        </label>
+                        <div class="theme-option">
+                            <i class="fas fa-moon"></i>
+                            <span>Dark</span>
+                        </div>
+                    </div>
+                    <p class="mb-0">&copy; 2025 EcoAware. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Theme Toggle Functionality
+        (function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const html = document.documentElement;
+            
+            // Check for saved theme preference or default to light mode
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            
+            // Set initial theme
+            if (currentTheme === 'dark') {
+                html.setAttribute('data-theme', 'dark');
+                themeToggle.checked = true;
+            } else {
+                html.setAttribute('data-theme', 'light');
+                themeToggle.checked = false;
+            }
+            
+            // Theme toggle event listener
+            themeToggle.addEventListener('change', function() {
+                if (this.checked) {
+                    html.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    html.setAttribute('data-theme', 'light');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
+

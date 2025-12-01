@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Environmental Sustainability Awareness</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <style>
+        body {
+            padding-top: 0;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            background: #f8f9fa;
+        }
+        .login-container {
+            width: 100%;
+            padding: 2rem;
+        }
+        .btn-success {
+            color: #ffffff !important;
+        }
+        .btn-success:hover {
+            color: #ffffff !important;
+            background-color: #218838 !important;
+        }
+        .btn-success:focus {
+            color: #ffffff !important;
+            background-color: #218838 !important;
+        }
+        .btn-success:active {
+            color: #ffffff !important;
+            background-color: #1e7e34 !important;
+        }
+        button.btn-success {
+            color: #ffffff !important;
+        }
+        button.btn-success:hover {
+            color: #ffffff !important;
+        }
+        .social-login .btn {
+            transition: all 0.3s;
+        }
+        .social-login .btn-outline-primary {
+            color: #0d6efd;
+            border-color: #0d6efd;
+        }
+        .social-login .btn-outline-primary:hover {
+            background-color: #0d6efd !important;
+            border-color: #0d6efd !important;
+            color: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+        }
+        .social-login .btn-outline-primary:hover i {
+            color: #ffffff !important;
+        }
+        .social-login .btn-outline-danger {
+            color: #dc3545;
+            border-color: #dc3545;
+        }
+        .social-login .btn-outline-danger:hover {
+            background-color: #dc3545 !important;
+            border-color: #dc3545 !important;
+            color: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+        }
+        .social-login .btn-outline-danger:hover i {
+            color: #ffffff !important;
+        }
+        .divider {
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Login Form -->
+    <div class="login-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-7">
+                    <div class="card shadow-lg">
+                        <div class="card-body p-5">
+                            <div class="text-center mb-4">
+                                <a href="index.html" class="text-decoration-none">
+                                    <h2 class="fw-bold text-success mb-0">
+                                        <i class="fas fa-leaf"></i> EcoAware
+                                    </h2>
+                                </a>
+                            </div>
+                            <h2 class="fw-bold mb-4 text-center">Sign In</h2>
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label for="loginEmail" class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" id="loginEmail" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="loginPassword" class="form-label">Password *</label>
+                                    <input type="password" class="form-control" id="loginPassword" required>
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                                    <label class="form-check-label" for="rememberMe">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <div class="mb-3 text-center">
+                                    <a href="#" class="text-success text-decoration-none">Forgot Password?</a>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-success btn-lg w-100">Login</button>
+                                </div>
+                                <div class="divider my-4">
+                                    <div class="d-flex align-items-center">
+                                        <hr class="flex-grow-1">
+                                        <span class="px-3 text-muted">OR</span>
+                                        <hr class="flex-grow-1">
+                                    </div>
+                                </div>
+                                <div class="social-login">
+                                    <button type="button" class="btn btn-outline-primary w-100 mb-3" onclick="handleSocialLogin('facebook')">
+                                        <i class="fab fa-facebook-f me-2"></i> Continue with Facebook
+                                    </button>
+                                    <button type="button" class="btn btn-outline-danger w-100" onclick="handleSocialLogin('google')">
+                                        <i class="fab fa-google me-2"></i> Continue with Google
+                                    </button>
+                                </div>
+                                <div class="text-center mt-3">
+                                    <p class="mb-0">Don't have an account? <a href="register.html" class="text-success">Register here</a></p>
+                                </div>
+                            </form>
+                            <div id="loginMessage" class="mt-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            const messageDiv = document.getElementById('loginMessage');
+            
+            if (!email || !password) {
+                messageDiv.innerHTML = '<div class="alert alert-danger">Please fill in all required fields!</div>';
+                return;
+            }
+            
+            // Simulate login (in real application, this would connect to a backend)
+            messageDiv.innerHTML = '<div class="alert alert-success">Login successful! Welcome back to EcoAware.</div>';
+            // In a real application, you would redirect to dashboard here
+            // window.location.href = 'dashboard.html';
+        });
+
+        function handleSocialLogin(provider) {
+            const messageDiv = document.getElementById('loginMessage');
+            if (provider === 'facebook') {
+                messageDiv.innerHTML = '<div class="alert alert-info">Redirecting to Facebook login...</div>';
+                // In a real application, you would integrate with Facebook OAuth here
+                // window.location.href = 'your-facebook-oauth-url';
+            } else if (provider === 'google') {
+                messageDiv.innerHTML = '<div class="alert alert-info">Redirecting to Google login...</div>';
+                // In a real application, you would integrate with Google OAuth here
+                // window.location.href = 'your-google-oauth-url';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,1309 @@
+/* Responsive Styles */
+
+/* Ensure consistent font family across all breakpoints for text elements */
+body,
+p,
+span,
+div:not([class*="fa"]):not([class*="icon"]),
+a,
+li,
+td,
+th,
+label,
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Ensure Our Story section uses consistent font in all views */
+section .col-lg-8 p,
+section .col-lg-8 p.lead,
+section .col-lg-8 .lead {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    font-weight: 400;
+}
+
+/* Override Bootstrap lead class font */
+p.lead {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* Large Desktop (1024px and above) */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+    }
+    
+    /* Ensure Our Story section font consistency on desktop */
+    section .col-lg-8 p,
+    section .col-lg-8 p.lead {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+}
+
+/* Tablet (768px to 1023px) */
+@media (max-width: 1023px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
+    
+    /* Ensure Our Story section font consistency on tablet */
+    section .col-lg-8 p,
+    section .col-lg-8 p.lead {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+    
+    p.lead {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        font-size: 1.05rem;
+        font-weight: 400;
+    }
+    
+    .hero-banner {
+        min-height: 80vh;
+    }
+    
+    .card-img-top {
+        height: 200px;
+    }
+    
+    .navbar-nav .btn {
+        margin-top: 0.5rem;
+    }
+    
+    section {
+        padding: 3rem 0;
+    }
+    
+    /* Improve section spacing and alignment */
+    section .container {
+        max-width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Ensure proper heading alignment */
+    section h2 {
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+    
+    /* Better visual spacing between sections */
+    section.bg-light {
+        background-color: #f8f9fa !important;
+    }
+    
+    /* Card alignment fixes for tablet view */
+    /* Ensure cards are properly aligned in grid columns */
+    .row .col-md-3,
+    .row .col-md-4,
+    .row .col-md-6,
+    .row .col-lg-3 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Ensure card content is properly aligned */
+    .card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+    
+    /* Respect text-center class - don't override if it exists */
+    .card-body.text-center {
+        text-align: center !important;
+    }
+    
+    /* Ensure buttons stay at bottom and centered */
+    .card-body .btn {
+        margin-top: auto;
+        align-self: center;
+        width: auto;
+        min-width: 150px;
+    }
+    
+    /* Ensure buttons in card-body.text-center are properly centered */
+    .card-body.text-center .btn {
+        display: inline-block;
+        margin-top: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Fix card text alignment - ensure text-center is respected */
+    .card-body.text-center p.card-text {
+        text-align: center !important;
+        margin-bottom: 1rem;
+    }
+    
+    /* Ensure proper spacing for multiple paragraphs in cards */
+    .card-body p.card-text + p.card-text {
+        margin-top: 0.5rem;
+    }
+    
+    /* Ensure card body content is properly aligned */
+    .card-body.text-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center !important;
+        padding: 1.5rem;
+    }
+    
+    /* Ensure all text elements in centered cards are centered */
+    .card-body.text-center p,
+    .card-body.text-center h3,
+    .card-body.text-center h4,
+    .card-body.text-center h5,
+    .card-body.text-center h6 {
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    
+    /* Fix date alignment in projects page cards */
+    .card-body.text-center p.text-muted {
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0.75rem;
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+    
+    .card-body.text-center p.text-muted small {
+        text-align: center !important;
+        display: inline;
+        vertical-align: baseline;
+        line-height: inherit;
+    }
+    
+    .card-body.text-center p.text-muted i {
+        display: inline;
+        vertical-align: baseline;
+        margin-right: 0.5rem;
+        line-height: inherit;
+    }
+    
+    /* But allow buttons to maintain their own alignment */
+    .card-body.text-center .btn {
+        text-align: center;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Fix icon alignment in benefit cards */
+    .card-body.text-center i {
+        display: block;
+        margin: 0 auto 1rem;
+        text-align: center;
+    }
+    
+    /* Fix icon spacing in benefit cards */
+    .card-body.text-center i.fa-3x {
+        margin-bottom: 1rem !important;
+        display: block;
+    }
+    
+    /* Ensure proper spacing in benefit cards */
+    .card-body.text-center > * {
+        text-align: center;
+    }
+    
+    /* Fix alignment for cards in 2-column layout */
+    .row .col-md-6 {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Fix alignment for cards in 3-column layout */
+    .row .col-md-4 {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Fix alignment for cards in 4-column layout */
+    .row .col-md-3 {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Ensure proper text alignment - only center if card-body has text-center class */
+    .card-body.text-center h3,
+    .card-body.text-center .card-text {
+        text-align: center;
+    }
+    
+    /* Fix card image alignment */
+    .card-img-top {
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    /* Ensure container has proper padding */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    /* Fix form alignment in tablet view */
+    .row .col-md-6 {
+        margin-bottom: 1rem;
+    }
+    
+    /* Ensure form controls are properly aligned */
+    .form-control,
+    .form-select {
+        width: 100%;
+    }
+    
+    /* Fix form label alignment */
+    .form-label {
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Ensure form rows are properly spaced */
+    .row.g-3 {
+        margin-left: calc(var(--bs-gutter-x, 1rem) * -0.5);
+        margin-right: calc(var(--bs-gutter-x, 1rem) * -0.5);
+    }
+    
+    .row.g-3 > * {
+        padding-left: calc(var(--bs-gutter-x, 1rem) * 0.5);
+        padding-right: calc(var(--bs-gutter-x, 1rem) * 0.5);
+    }
+    
+    /* Ensure row displays as flex for proper alignment */
+    .row.g-4 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+    }
+    
+    /* Ensure cards fill their container properly and align */
+    .row .col-md-3 .card,
+    .row .col-md-4 .card,
+    .row .col-md-6 .card,
+    .row .col-lg-3 .card {
+        margin: 0;
+        width: 100%;
+    }
+    
+    /* Ensure equal height for cards in the same row */
+    .row .col-md-3,
+    .row .col-md-4,
+    .row .col-md-4.text-center,
+    .row .col-md-6,
+    .row .col-md-6.col-lg-4,
+    .row .col-lg-3 {
+        align-self: stretch;
+    }
+    
+    /* Ensure proper column widths in tablet view */
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .row .col-md-3 {
+            flex: 0 0 25%;
+            max-width: 25%;
+        }
+        
+        .row .col-md-4 {
+            flex: 0 0 33.33333333%;
+            max-width: 33.33333333%;
+        }
+        
+        .row .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        
+        /* Fix col-md-6 col-lg-4 layout for tablet (should show 2 columns) */
+        .row .col-md-6.col-lg-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+        
+        /* Ensure col-md-4 shows 3 columns in tablet view */
+        .row .col-md-4:not(.text-center) {
+            flex: 0 0 33.33333333%;
+            max-width: 33.33333333%;
+        }
+        
+        /* Fix Impact Reports col-md-4.text-center layout for tablet */
+        .row .col-md-4.text-center {
+            flex: 0 0 33.33333333%;
+            max-width: 33.33333333%;
+        }
+    }
+    
+    /* Ensure col-md-6 col-lg-4 cards are properly aligned */
+    .row .col-md-6.col-lg-4 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    /* Fix card alignment for event cards */
+    .row .col-md-6.col-lg-4 .card {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+    
+    /* Ensure event card content is properly aligned */
+    .row .col-md-6.col-lg-4 .card-body.text-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem;
+    }
+    
+    /* Fix badge alignment in event cards */
+    .card-body.text-center .badge {
+        align-self: center;
+        margin-bottom: 1rem;
+    }
+    
+    /* Ensure event card paragraphs are centered */
+    .card-body.text-center p {
+        text-align: center !important;
+        margin-bottom: 0.75rem;
+        width: 100%;
+    }
+    
+    /* Fix event card buttons alignment */
+    .card-body.text-center .btn {
+        margin-top: 1rem;
+        align-self: center;
+    }
+    
+    /* Ensure icon alignment in event cards */
+    .card-body.text-center i.fas {
+        display: inline-block;
+    }
+    
+    /* Fix date alignment in projects page col-md-6 cards */
+    .row .col-md-6 .card-body.text-center p.text-muted {
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1rem;
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+    
+    .row .col-md-6 .card-body.text-center p.text-muted small {
+        text-align: center !important;
+        display: inline;
+        vertical-align: baseline;
+        line-height: inherit;
+    }
+    
+    .row .col-md-6 .card-body.text-center p.text-muted i {
+        display: inline;
+        vertical-align: baseline;
+        margin-right: 0.5rem;
+        line-height: inherit;
+    }
+    
+    /* Fix Impact Reports section alignment */
+    .row .col-md-4.text-center {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .row .col-md-4.text-center .card {
+        height: 100%;
+        width: 100%;
+    }
+    
+    /* Ensure Impact Reports card content is properly aligned */
+    .row .col-md-4.text-center .card-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem;
+    }
+    
+    /* Fix Impact Reports icons alignment */
+    .row .col-md-4.text-center .card-body i.fa-3x {
+        display: block;
+        margin: 0 auto 1rem;
+    }
+    
+    /* Ensure Impact Reports buttons are centered */
+    .row .col-md-4.text-center .card-body .btn {
+        margin-top: 1rem;
+        align-self: center;
+    }
+    
+    /* Ensure Impact Reports paragraphs are centered */
+    .row .col-md-4.text-center .card-body p {
+        text-align: center !important;
+        width: 100%;
+        margin-bottom: 0.75rem;
+    }
+    
+    /* Fix blog card alignment in tablet view */
+    .row .col-md-6.col-lg-4 .card-body.text-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.5rem;
+    }
+    
+    /* Fix blog card badge alignment */
+    .row .col-md-6.col-lg-4 .card-body.text-center .badge {
+        align-self: center;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+    
+    /* Fix blog card heading alignment */
+    .row .col-md-6.col-lg-4 .card-body.text-center h3 {
+        text-align: center !important;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    /* Fix blog card text alignment */
+    .row .col-md-6.col-lg-4 .card-body.text-center .card-text {
+        text-align: center !important;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    /* Fix blog card date alignment */
+    .row .col-md-6.col-lg-4 .card-body.text-center .text-muted {
+        text-align: center !important;
+        width: 100%;
+        margin-bottom: 1rem;
+        display: block;
+    }
+    
+    /* Fix blog card date icon alignment */
+    .row .col-md-6.col-lg-4 .card-body.text-center .text-muted i {
+        display: inline-block;
+    }
+    
+    /* Fix blog card button alignment */
+    .row .col-md-6.col-lg-4 .card-body.text-center .btn {
+        margin-top: auto;
+        align-self: center;
+        width: auto;
+        min-width: 120px;
+    }
+    
+    /* Global Data section styling for tablet view */
+    .row .col-md-3.text-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    
+    .row .col-md-3.text-center h3.display-4 {
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        line-height: 1.2;
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    
+    .row .col-md-3.text-center p.lead {
+        margin-bottom: 0;
+        font-size: 1rem;
+        line-height: 1.5;
+        text-align: center;
+        width: 100%;
+        display: block;
+        padding: 0 0.5rem;
+    }
+    
+    /* Ensure proper spacing for Global Data section */
+    section .row.g-4 .col-md-3 {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Global Data section container alignment */
+    section .row.g-4 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: center;
+    }
+    
+    /* Ensure Global Data columns are properly aligned and centered */
+    section .row.g-4 .col-md-3.text-center {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Ensure proper vertical alignment for Global Data items */
+    section .row.g-4 .col-md-3.text-center > * {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+    
+    /* Ensure Global Data numbers are properly sized and aligned */
+    section .row.g-4 .col-md-3.text-center h3.display-4 {
+        text-align: center !important;
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Ensure Global Data descriptions are properly aligned */
+    section .row.g-4 .col-md-3.text-center p.lead {
+        text-align: center !important;
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Improve card design in tablet view */
+    .card.shadow-sm {
+        border-radius: 8px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .card.shadow-sm:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+    }
+    
+    /* Ensure proper text alignment for all text-center elements */
+    .text-center {
+        text-align: center !important;
+    }
+    
+    .row .text-center {
+        text-align: center !important;
+    }
+    
+    /* Fix display-4 font size in tablet view */
+    h3.display-4 {
+        font-size: 2.5rem;
+        text-align: center;
+        width: 100%;
+    }
+    
+    /* Ensure lead paragraphs are properly styled */
+    p.lead {
+        font-size: 1.1rem;
+        font-weight: 300;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    
+    /* Improve Global Data section visual design */
+    section.bg-light .row.g-4 .col-md-3.text-center {
+        background-color: transparent;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+    
+    section.bg-light .row.g-4 .col-md-3.text-center:hover {
+        transform: translateY(-5px);
+    }
+    
+    /* Ensure consistent spacing in Global Data section */
+    section .row.g-4 {
+        margin-left: -0.75rem;
+        margin-right: -0.75rem;
+    }
+    
+    section .row.g-4 > .col-md-3 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    
+    /* Dropdown menu alignment on tablet */
+    .navbar-collapse {
+        position: relative;
+    }
+    
+    .navbar-nav {
+        position: relative;
+        width: 100%;
+    }
+    
+    .navbar-nav .dropdown {
+        position: static;
+    }
+    
+    .navbar-nav .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: left;
+        border: none;
+        box-shadow: none;
+        background-color: rgba(0,0,0,0.05);
+        padding-left: 1.5rem;
+    }
+    
+    .navbar-nav .dropdown-item {
+        padding: 0.5rem 1rem;
+        text-align: left;
+    }
+    
+    .navbar-nav .dropdown-toggle::after {
+        float: right;
+        margin-top: 0.5rem;
+    }
+    
+    /* Ensure dropdown menus are visible when shown */
+    .navbar-nav .dropdown-menu.show {
+        display: block !important;
+    }
+    
+    /* Style dropdown items on tablet */
+    .navbar-nav .dropdown-item:hover,
+    .navbar-nav .dropdown-item:focus {
+        background-color: rgba(40,167,69,0.1);
+        color: #28a745;
+    }
+}
+
+/* Mobile Landscape (425px to 767px) */
+@media (max-width: 767px) {
+    body {
+        padding-top: 70px;
+    }
+    
+    h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* Ensure Our Story section font consistency on mobile */
+    section .col-lg-8 p,
+    section .col-lg-8 p.lead {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        font-size: 0.95rem;
+        font-weight: 400;
+        line-height: 1.6;
+    }
+    
+    p.lead {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    
+    .hero-banner {
+        min-height: 70vh;
+        padding: 2rem 0;
+    }
+    
+    .hero-banner .display-4 {
+        font-size: 1.75rem;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    
+    .card-img-top {
+        height: 180px;
+    }
+    
+    /* Fix date alignment in projects page cards for mobile */
+    .row .col-md-6 .card-body.text-center p.text-muted {
+        text-align: center !important;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0.75rem;
+        margin-bottom: 0;
+        line-height: 1.5;
+    }
+    
+    .row .col-md-6 .card-body.text-center p.text-muted small {
+        text-align: center !important;
+        display: inline;
+        vertical-align: baseline;
+        line-height: inherit;
+    }
+    
+    .row .col-md-6 .card-body.text-center p.text-muted i {
+        display: inline;
+        vertical-align: baseline;
+        margin-right: 0.5rem;
+        line-height: inherit;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.75rem 0;
+    }
+    
+    .navbar-nav .btn {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+    
+    /* Dropdown menu alignment on mobile */
+    .navbar-collapse {
+        position: relative;
+    }
+    
+    .navbar-nav {
+        position: relative;
+        width: 100%;
+    }
+    
+    .navbar-nav .dropdown {
+        position: static;
+    }
+    
+    .navbar-nav .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: left;
+        border: none;
+        box-shadow: none;
+        background-color: rgba(0,0,0,0.05);
+        padding-left: 1.5rem;
+    }
+    
+    .navbar-nav .dropdown-toggle::after {
+        float: right;
+        margin-top: 0.5rem;
+    }
+    
+    .navbar-nav .dropdown-item {
+        text-align: left;
+        padding: 0.5rem 1rem;
+    }
+    
+    /* Ensure dropdown menus are visible when shown */
+    .navbar-nav .dropdown-menu.show {
+        display: block !important;
+    }
+    
+    /* Style dropdown items on mobile */
+    .navbar-nav .dropdown-item:hover,
+    .navbar-nav .dropdown-item:focus {
+        background-color: rgba(40,167,69,0.1);
+        color: #28a745;
+    }
+    
+    section {
+        padding: 2rem 0;
+    }
+    
+    .page-header {
+        padding: 4rem 0;
+    }
+    
+    footer .col-md-4 {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .gallery-item img {
+        height: 250px;
+    }
+    
+    /* Global Data section mobile styling */
+    section .row.g-4 .col-md-3.text-center {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 2rem;
+        padding: 1.5rem 1rem;
+    }
+    
+    section .row.g-4 .col-md-3.text-center h3.display-4 {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    section .row.g-4 .col-md-3.text-center p.lead {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile Portrait (375px to 424px) */
+@media (max-width: 424px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.35rem;
+    }
+    
+    h3 {
+        font-size: 1rem;
+    }
+    
+    .hero-banner {
+        min-height: 60vh;
+    }
+    
+    .hero-banner .display-4 {
+        font-size: 1.5rem;
+    }
+    
+    .hero-banner .lead {
+        font-size: 1rem;
+    }
+    
+    .card-img-top {
+        height: 150px;
+    }
+    
+    /* Global Data section mobile portrait styling */
+    section .row.g-4 .col-md-3.text-center {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+        padding: 1.25rem 0.75rem;
+    }
+    
+    section .row.g-4 .col-md-3.text-center h3.display-4 {
+        font-size: 1.75rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    section .row.g-4 .col-md-3.text-center p.lead {
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    /* Dropdown menu alignment on small mobile */
+    .navbar-collapse {
+        position: relative;
+    }
+    
+    .navbar-nav {
+        position: relative;
+        width: 100%;
+    }
+    
+    .navbar-nav .dropdown {
+        position: static;
+    }
+    
+    .navbar-nav .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: left;
+        border: none;
+        box-shadow: none;
+        background-color: rgba(0,0,0,0.05);
+        padding-left: 1.5rem;
+    }
+    
+    .navbar-nav .dropdown-item {
+        text-align: left;
+        padding: 0.5rem 1rem;
+    }
+    
+    .navbar-nav .dropdown-toggle::after {
+        float: right;
+        margin-top: 0.5rem;
+    }
+    
+    /* Ensure dropdown menus are visible when shown */
+    .navbar-nav .dropdown-menu.show {
+        display: block !important;
+    }
+    
+    section {
+        padding: 1.5rem 0;
+    }
+    
+    .page-header {
+        padding: 3rem 0;
+    }
+    
+    .gallery-item img {
+        height: 200px;
+    }
+    
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+    
+    footer {
+        padding: 3rem 0 !important;
+    }
+}
+
+/* Small Mobile (320px to 374px) */
+@media (max-width: 374px) {
+    body {
+        padding-top: 65px;
+    }
+    
+    h1 {
+        font-size: 1.35rem;
+    }
+    
+    h2 {
+        font-size: 1.2rem;
+    }
+    
+    h3 {
+        font-size: 0.95rem;
+    }
+    
+    .hero-banner {
+        min-height: 55vh;
+    }
+    
+    .hero-banner .display-4 {
+        font-size: 1.35rem;
+    }
+    
+    .hero-banner .lead {
+        font-size: 0.95rem;
+    }
+    
+    .card-img-top {
+        height: 140px;
+    }
+    
+    /* Global Data section small mobile styling */
+    section .row.g-4 .col-md-3.text-center {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 1.25rem;
+        padding: 1rem 0.5rem;
+    }
+    
+    section .row.g-4 .col-md-3.text-center h3.display-4 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    section .row.g-4 .col-md-3.text-center p.lead {
+        font-size: 0.85rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .navbar-toggler {
+        padding: 0.25rem 0.5rem;
+        font-size: 1rem;
+    }
+    
+    /* Dropdown menu alignment on very small mobile */
+    .navbar-collapse {
+        position: relative;
+    }
+    
+    .navbar-nav {
+        position: relative;
+        width: 100%;
+    }
+    
+    .navbar-nav .dropdown {
+        position: static;
+    }
+    
+    .navbar-nav .dropdown-menu {
+        position: static !important;
+        float: none;
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        text-align: left;
+        border: none;
+        box-shadow: none;
+        background-color: rgba(0,0,0,0.05);
+        padding-left: 1.5rem;
+    }
+    
+    .navbar-nav .dropdown-item {
+        text-align: left;
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .navbar-nav .dropdown-toggle::after {
+        float: right;
+        margin-top: 0.5rem;
+    }
+    
+    /* Ensure dropdown menus are visible when shown */
+    .navbar-nav .dropdown-menu.show {
+        display: block !important;
+    }
+    
+    section {
+        padding: 1.25rem 0;
+    }
+    
+    .page-header {
+        padding: 2.5rem 0;
+    }
+    
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .gallery-item img {
+        height: 180px;
+    }
+    
+    .testimonial-card {
+        padding: 1.25rem;
+    }
+    
+    footer {
+        padding: 2.5rem 0 !important;
+    }
+    
+    .social-icons a {
+        font-size: 1.25rem;
+        margin: 0 0.5rem;
+    }
+}
+
+/* Fix overflow issues */
+@media (max-width: 1023px) {
+    /* Don't remove row margins for g-4 gutter system */
+    .row:not(.g-4) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    /* Ensure proper column padding while maintaining gutters */
+    .row.g-4 .col-md-3,
+    .row.g-4 .col-md-4,
+    .row.g-4 .col-md-6,
+    .row.g-4 .col-lg-3,
+    .row.g-4 .col-lg-4 {
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+    }
+    
+    /* For rows without gutter classes */
+    .row:not(.g-4) .col-md-3,
+    .row:not(.g-4) .col-md-4,
+    .row:not(.g-4) .col-md-6,
+    .row:not(.g-4) .col-lg-4,
+    .row:not(.g-4) .col-lg-6,
+    .row:not(.g-4) .col-lg-8 {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    [class*="col-"] {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+@media (max-width: 424px) {
+    [class*="col-"] {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .form-control {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+/* Ensure no horizontal scroll and hide scrollbars */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+/* Hide scrollbars for all scrollable elements */
+* {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+* {
+    max-width: 100%;
+}
+
+/* Fix long text overflow */
+p, li, span, a {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Responsive images */
+img, video, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive tables */
+table {
+    width: 100%;
+    table-layout: auto;
+}
+
+@media (max-width: 767px) {
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+    }
+}
+
+/* Responsive forms */
+@media (max-width: 767px) {
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-row .col {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Stack elements on mobile */
+@media (max-width: 767px) {
+    .d-flex {
+        flex-direction: column;
+    }
+    
+    .justify-content-between,
+    .justify-content-around,
+    .justify-content-center {
+        align-items: center;
+    }
+}
+
+/* Dark mode support for responsive dropdown menus */
+@media (max-width: 1023px) {
+    [data-theme="dark"] .navbar-nav .dropdown-menu {
+        background-color: rgba(255,255,255,0.05);
+    }
+    
+    [data-theme="dark"] .navbar-nav .dropdown-item:hover,
+    [data-theme="dark"] .navbar-nav .dropdown-item:focus {
+        background-color: rgba(40,167,69,0.2);
+        color: #28a745;
+    }
+    
+    [data-theme="dark"] .navbar-nav .dropdown-item {
+        color: var(--text-primary);
+    }
+}
+
